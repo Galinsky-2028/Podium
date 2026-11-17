@@ -1,0 +1,32 @@
+{
+  "name": "podium",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated, fully editable campaign speech video pipeline: speech -> shotlist -> HeyGen/Grok clips -> timeline editor with LUT grading -> export.",
+  "scripts": {
+    "dev": "concurrently -k \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.9.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "mammoth": "^1.13.0",
+    "multer": "^2.5.0",
+    "pdf-parse": "^2.4.5",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^10.0.7",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vite": "^8.3.8"
+  }
+}
